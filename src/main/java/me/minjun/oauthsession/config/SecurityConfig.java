@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .formLogin().disable()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/user/oauth").authenticated()
+                .antMatchers("/user/**").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .oauth2Login().userInfoEndpoint().userService(userService);

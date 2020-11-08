@@ -18,9 +18,14 @@ public class UserApiController {
         return "hello world";
     }
 
-    @GetMapping("/oauth")
+    @GetMapping("/google")
     public String oauth2(){
         return "OAuth2 finished";
+    }
+
+    @GetMapping("/kakao")
+    public String oauth2Kakao(){
+        return "kakao authentication finished";
     }
 
     @GetMapping("/session")
